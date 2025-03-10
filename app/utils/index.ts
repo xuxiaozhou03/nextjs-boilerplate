@@ -6,7 +6,7 @@ export const extractJsonFromCallback = <T>(
   if (!jsonString) {
     return null;
   }
-  return JSON.parse(jsonString[0]) as T;
+  return JSON.parse(jsonString[1]) as T;
 };
 
 const wait = (time: number) =>

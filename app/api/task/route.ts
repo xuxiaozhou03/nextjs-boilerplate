@@ -1,6 +1,7 @@
 import { fetchEtf, fetchEtfList } from "@/app/services/reptileEtf";
 import { NextResponse } from "next/server";
 import * as fs from "fs";
+import * as path from "path";
 import { loopRun } from "@/app/utils";
 import { EtfInfo } from "@/app/type";
 
@@ -34,7 +35,11 @@ export const GET = async () => {
     data: result.map((item) => fields.map((field) => item[field as "name"])),
   };
   if (process.env.NODE_ENV === "development") {
-    fs.writeFileSync("etfs.json", JSON.stringify(json));
+    // 本地开发环境，写入文件
+    fs.writeFileSync(
+      path.resolve("./app/assets/etfs.json"),
+      JSON.stringify(json, null, 2)
+    );
   }
   return NextResponse.json(json);
 };
