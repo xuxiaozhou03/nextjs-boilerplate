@@ -15,13 +15,15 @@ const data = etfs.data.map((etf) => {
   }, {} as Etf);
 });
 
-const originGroupIndexEtfs = data.reduce((acc, etf) => {
-  if (!acc[etf.trackingIndex]) {
-    acc[etf.trackingIndex] = [];
-  }
-  acc[etf.trackingIndex].push(etf);
-  return acc;
-}, {} as { [index: string]: Etf[] });
+const originGroupIndexEtfs = data
+  .filter((etf) => etf.scale >= 1)
+  .reduce((acc, etf) => {
+    if (!acc[etf.trackingIndex]) {
+      acc[etf.trackingIndex] = [];
+    }
+    acc[etf.trackingIndex].push(etf);
+    return acc;
+  }, {} as { [index: string]: Etf[] });
 
 export const groupIndexEtfs = Object.entries(originGroupIndexEtfs).map(
   ([index, etfs]) => {
