@@ -1,5 +1,5 @@
 import React from "react";
-import { groupIndexEtfs } from "./data";
+import { groupIndexEtfs } from "./utils/data";
 
 export default function Home() {
   return (

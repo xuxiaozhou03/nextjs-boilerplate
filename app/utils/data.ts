@@ -1,4 +1,4 @@
-import etfs from "./assets/etfs.json";
+import etfs from "../assets/etfs.json";
 
 export type Etf = {
   symbol: string;
