@@ -1,5 +1,5 @@
 import React from "react";
-import { groupIndexEtfs } from "../utils/data";
+import { groupIndexEtfs } from "../services/data";
 import Analysis from "./components/analysis";
 import Suggestions from "./components/suggestions";
 import HoldLog from "./components/holdLog";
