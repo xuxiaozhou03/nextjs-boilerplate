@@ -1,6 +1,6 @@
-import { KLineData } from "../type";
-import { klinefields } from "../utils/constant";
-import { request } from "../utils/request";
+import { KLineData } from "../app/type";
+import { klinefields } from "../lib/constant";
+import { request } from "../lib/request";
 
 export enum Period {
   "daily" = "101",

@@ -1,7 +1,7 @@
-import { request } from "@/app/utils/request";
+import { request } from "@/lib/request";
 import * as cheerio from "cheerio";
-import { extractJsonFromCallback } from "../utils";
-import { EtfInfo } from "../type";
+import { extractJsonFromCallback } from "../lib";
+import { EtfInfo } from "../app/type";
 
 export const fetchEtf = async (symbol: string) => {
   const data = await request(

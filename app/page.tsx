@@ -1,5 +1,6 @@
 import React from "react";
-import { groupIndexEtfs } from "./services/data";
+import { groupIndexEtfs } from "../services/data";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,11 +21,10 @@ export default function Home() {
               </td>
             </tr>
             {group.etfs.map((etf) => (
-              <tr
-                key={etf.symbol}
-                className={etf.scale < 1 ? "line-through" : ""}
-              >
-                <td>{etf.name}</td>
+              <tr key={etf.symbol}>
+                <td>
+                  <Link href={`/${etf.symbol}`}>{etf.name}</Link>
+                </td>
                 <td>{etf.symbol}</td>
                 <td>{etf.scale}</td>
               </tr>

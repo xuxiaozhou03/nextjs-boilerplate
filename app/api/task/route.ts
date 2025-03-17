@@ -1,8 +1,8 @@
-import { fetchEtf, fetchEtfList } from "@/app/services/reptileEtf";
+import { fetchEtf, fetchEtfList } from "@/services/reptileEtf";
 import { NextResponse } from "next/server";
 import * as fs from "fs";
 import * as path from "path";
-import { loopRun } from "@/app/utils";
+import { loopRun } from "@/lib";
 import { EtfInfo } from "@/app/type";
 
 export const GET = async () => {
