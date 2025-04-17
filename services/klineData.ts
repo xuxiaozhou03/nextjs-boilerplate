@@ -1,4 +1,4 @@
-import { KLineData } from "../app/type";
+import { KLineData } from "../type";
 import { klinefields } from "../lib/constant";
 import { request } from "../lib/request";
 

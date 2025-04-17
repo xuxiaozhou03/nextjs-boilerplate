@@ -1,5 +1,5 @@
 import originEtfs from "../assets/etfs.json";
-import { EtfInfo } from "../app/type";
+import { EtfInfo } from "../type";
 
 export const etfs = originEtfs.data.map((etf) => {
   return originEtfs.fields.reduce((acc, field, index) => {

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import * as fs from "fs";
 import * as path from "path";
 import { loopRun } from "@/lib";
-import { EtfInfo } from "@/app/type";
+import { EtfInfo } from "@/type";
 
 export const GET = async () => {
   const etfs = await fetchEtfList();
